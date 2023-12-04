@@ -1,0 +1,66 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+h1, h2, h3, p {
+    /* You can adjust the font size and other styles as needed */
+    font-family: 'Open Sans', sans-serif;
+}
+
+li, h2 {
+    border-color: black;
+    border-style: solid;
+    padding: 25px;
+    text-align: center;
+    border-top: none;
+}
+
+h2 {
+    margin: 0px;
+    border-top: solid;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+p {
+    padding: center;
+    display: inline;
+}
+
+ul > h2:first-child {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: #ffd700;
+}
+
+ul > li:last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+
+li > a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease; /* Added transition for smooth color change */
+}
+
+li:hover { 
+    background-color: #333;
+}
+
+li:hover a {
+    color: white; /* Change text color to white on hover */
+}
+
+li { 
+    padding: 20px 0px;
+}
+
+.block {
+    width: 400px;
+}
