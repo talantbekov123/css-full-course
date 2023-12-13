@@ -6,29 +6,37 @@ import { Header } from './Header';
 function MainContent() {
   return (
     <div>
-      <h1>Reasons i'm exited to react</h1>
-      <ol>
-        <li>It is popular library, so I will be able to fit in with the cool kids!</li>
-        <li>I'm more likely will be better developer if I know react</li>
-      </ol>
+      <img src='./poster.png'/>
+      <h1>Online Experiences</h1>
+      <p>
+        Join unique interactive activities led by one-of-a-kind hosts—all without leaving home.
+      </p>
     </div>
   )
 }
 
-function Footer() {
+function Poster() {
   return (
-    <div>
-      MR. Kairat Beast, all rigth reserved
+    <div className="poster">
+      <img src="./poster-1.png" alt=""/>
+      <p>
+        Life lessons with Katie Zaferes
+      </p>
+      <p>From $136 / person</p>
     </div>
   )
 }
-
 
 const page = (
-  <div>
+  <div className="main">
     <Header />
     <MainContent />
-    <Footer />
+    <div className='posters'>
+       <Poster />
+       <Poster />
+       <Poster />
+
+    </div>
   </div>
 );
 
