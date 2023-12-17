@@ -5,24 +5,32 @@ import { Header } from './Header';
 
 function MainContent() {
   return (
-    <div>
+    <div className='mainContent'>
       <img src='./poster.png'/>
-      <h1>Online Experiences</h1>
-      <p>
-        Join unique interactive activities led by one-of-a-kind hosts—all without leaving home.
-      </p>
+
+      <div className='experienceDescription'>
+        <h1>Online Experiences</h1>
+        <p>
+          Join unique interactive activities led by one-of-a-kind hosts—all without leaving home.
+        </p>
+      </div>
+      <div className='posters'>
+        <Poster img="./poster-1.png" title="Life lesson with Ledi GaGa"/>
+        <Poster img="./poster-2.png" title="How to become a millionere"/>
+        <Poster img="./poster-3.png" title="How swimming help me to meditate"/>
+      </div>
     </div>
   )
 }
 
-function Poster() {
+function Poster(props) {
   return (
     <div className="poster">
-      <img src="./poster-1.png" alt=""/>
+      <img src={props.img} alt=""/>
       <p>
-        Life lessons with Katie Zaferes
+        {props.title}
       </p>
-      <p>From $136 / person</p>
+      <p>{props.description}</p>
     </div>
   )
 }
@@ -31,12 +39,6 @@ const page = (
   <div className="main">
     <Header />
     <MainContent />
-    <div className='posters'>
-       <Poster />
-       <Poster />
-       <Poster />
-
-    </div>
   </div>
 );
 
