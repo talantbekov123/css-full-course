@@ -3,7 +3,7 @@ export function Header() {
     return (
       <header>
         <nav className='nav'>
-          <img src="./logo.png" className='nav-logo'/>
+          <span className='center-text'><i class="fa fa-globe" aria-hidden="true"></i> my travel journal.</span>
         </nav>
       </header>
     )
