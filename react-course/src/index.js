@@ -1,45 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import reportWebVitals from './reportWebVitals';
-import { Header } from './Header';
-import posters from './travelData';
 
-function MainContent() {
-  const postersElem = posters.map(poster => {
-    return <Poster {...poster}/>
-  });
+function Calculator() {
+  const [number, setNumber] = useState(0);
+
+  const handleIncrease = () => {
+    setNumber((prevNumber) => prevNumber + 1);
+  };
+
+  const handleDecrease = () => {
+    setNumber((prevNumber) => prevNumber - 1);
+  };
 
   return (
-    postersElem
-  )
-}
-
-function Poster(props) {
-  return (
-    <div class="poster">
-      <img src={props.image} alt="Poster Image" />
-      <div class="text">
-            <p className='country'>{props.country}</p>
-            <p><a href={props.link}>View on Google Maps</a></p>
-            <h1><strong>{props.location}</strong></h1>
-            <p><strong>{props.dates}</strong></p>
-            <p>{props.description}</p>
-        </div>
+    <div className="calculator">
+      <div className="circle">{number}</div>
+      <div className="button-container">
+        <button onClick={handleIncrease}>+</button>
+        <button onClick={handleDecrease}>-</button>
+      </div>
     </div>
-  )
+  );
 }
 
-const page = (
+const App = (
   <div className="main">
-    <Header />
-    <MainContent />
+    <Calculator />
   </div>
 );
 
-
-ReactDOM.render(
-  page,
-  document.getElementById('root')
-);
-
-reportWebVitals();
+ReactDOM.render(App, document.getElementById('root'));
